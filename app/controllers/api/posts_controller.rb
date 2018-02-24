@@ -23,7 +23,7 @@ class Api::PostsController < ApplicationController
     if @post.update(post_params)
       render json: @post
     else
-      render json: {message: post.errors}, status: 422
+      render json: {message: @post.errors}, status: 422
     end
   end
 
