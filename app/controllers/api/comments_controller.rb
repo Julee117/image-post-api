@@ -19,6 +19,22 @@ class Api::CommentsController < ApplicationController
     end
   end
 
+  def update
+    if @comment.update(comment_params)
+      render json: @comment
+    else
+      render json: {message: @comment.errors}, status: 422
+    end
+  end
+
+  def destroy
+    if @comment.destroy
+      render status: 204
+    else
+      render json: {message: "Unable to remove comment"}, status: 400
+    end
+  end
+
   private
 
   def set_comment
