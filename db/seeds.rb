@@ -9,3 +9,4 @@ Post.create(title: "War face", image_url: "http://quotationsquotes.com/wp-conten
 Post.create(title: "Laughing pug", image_url: "https://lh6.ggpht.com/vd9dnqXiZMFcP7pjhw6JxeT_vIThDpJg2jN5rVW_f6-nJFuJzXBeiUBE9fskWFS7EQ=w300", content: "This guy makes me smile", likes: 0)
 Post.create(title: "Face plant", image_url: "https://pbs.twimg.com/media/CySyUNFXAAANL5i.jpg", content: "His favorite sleeping position", likes: 0)
 Post.create(title: "Corgi loaf", image_url: "http://i.imgur.com/yLkFUI5.jpg", content: "Corgi down", likes: 0)
+Post.create(title: "Cutey", image_url: "http://i.imgur.com/yF6Imbd.png", content: "Dog before and after being called a good boy", likes: 0)
