@@ -3,16 +3,15 @@ class Api::CommentsController < ApplicationController
   before_action :set_post, only: [:index, :create]
 
   def index
-    @comments = Comment.all
-    render json: @comments, status: 200
+    render json: @post.comments, status: 200
   end
 
   def create
-    comment = Comment.new(comment_params)
-    if comment.save
-      render json: comment, status: 201
+    @comment = @post.comments.build(comment_params)
+    if @comment.save
+      render json: @comment, status: 201
     else
-      render json: {message: comment.errors}, status: 422
+      render json: {message: @comment.errors}, status: 422
     end
   end
 
