@@ -21,7 +21,7 @@ class Api::PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      render json: @post
+      render json: @post, status: 200
     else
       render json: {message: @post.errors}, status: 422
     end
