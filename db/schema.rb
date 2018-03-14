@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20180227203624) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "likes"
+    t.integer "likes", default: 0
   end
 
 end
